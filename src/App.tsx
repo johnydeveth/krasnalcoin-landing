@@ -5,19 +5,27 @@ import Tokenomics from "./pages/Tokenomics";
 
 const useStyles = makeStyles({
   container: {
-    height: "100vh",
     overflowY: "auto",
+    overflow: "auto",
+    height: "100%",
+    flexFlow: "column nowrap",
     scrollSnapType: "y mandatory",
   },
   page: {
-    height: "100vh",
     scrollSnapAlign: "start",
-    border: "1px solid #ccc",
+    scrollSnapStop: "always",
+    flex: "none",
+    height: "100%",
+    width: "100%",
+    display: "flex",
+    justifyContent: "stretch",
+    alignItems: "stretch",
   },
 });
 
 function App() {
   const classes = useStyles();
+
   return (
     <Box className={classes.container}>
       <Box className={classes.page}>

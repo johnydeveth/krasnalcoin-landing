@@ -1,11 +1,27 @@
-import { Box, Stack, Typography } from "@mui/material";
+import { Box, BoxProps, Stack, Typography } from "@mui/material";
+import Background from "../assets/background_upper.png";
 import Logo from "../assets/logo.png";
 import LinkButton from "../components/LinkButton";
 import Scroll from "../components/Scroll";
 
-export default function Landing() {
+export default function Landing(props: BoxProps) {
   return (
-    <div className="bg-image">
+    <Box
+      sx={{
+        backgroundImage: `url(${Background})`,
+        flex: 1,
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+        position: "relative",
+        animationName: "fadeIn",
+        animationDuration: "2s",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+      {...props}
+    >
       <Stack alignItems="center" pb={{ xs: 6, md: 0 }}>
         <img src={Logo} className="logo" />
         <Typography
@@ -21,15 +37,12 @@ export default function Landing() {
           <LinkButton href="https://quickswap.exchange/#/swap?swapIndex=1&currency0=ETH&currency1=0x784665471bB8B945b57A76a9200B109Ee214E789">
             Buy&nbsp;<Box fontWeight="bold">$KC</Box>
           </LinkButton>
-          <LinkButton href="https://krasnalcoin.pl/wp-content/uploads/2024/02/Litepaper-Krasnalcoina.pdf">
-            Read&nbsp;<Box fontWeight="bold">LitePaper</Box>
-          </LinkButton>
           <LinkButton href="https://app.krasnalcoin.finance/">
             Open&nbsp;<Box fontWeight="bold">App</Box>
           </LinkButton>
         </Stack>
         <Scroll marginTop={{ xs: 4, md: 8 }} />
       </Stack>
-    </div>
+    </Box>
   );
 }
