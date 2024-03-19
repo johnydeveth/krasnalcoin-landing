@@ -8,3 +8,6 @@ export default createTheme({
     },
   },
 });
+
+export const xlHorizontalPadding = "200px";
+export const mdHorizontalPadding = "140px";

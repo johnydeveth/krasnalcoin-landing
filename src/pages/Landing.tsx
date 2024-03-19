@@ -10,7 +10,7 @@ export default function Landing(props: BoxProps) {
       sx={{
         backgroundImage: `url(${Background})`,
         flex: 1,
-        backgroundPosition: "center",
+        backgroundPosition: "bottom",
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
         position: "relative",
