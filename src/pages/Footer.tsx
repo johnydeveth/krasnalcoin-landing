@@ -7,7 +7,12 @@ import { mdHorizontalPadding, xlHorizontalPadding } from "../utils/theme";
 
 export default function Footer(props: StackProps) {
   return (
-    <Stack direction="column" height={210} sx={{ backgroundColor: "#331a00" }}>
+    <Stack
+      direction="column"
+      height={210}
+      sx={{ backgroundColor: "#331a00" }}
+      {...props}
+    >
       <CustomDivider />
       <Box position="relative" flex={1}>
         <Box
