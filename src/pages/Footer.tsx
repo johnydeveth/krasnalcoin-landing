@@ -2,14 +2,16 @@ import { Box, Stack, StackProps } from "@mui/material";
 import Logo from "../assets/logo.png";
 import CustomDivider from "../components/CustomDivider";
 import LinkList from "../components/LinkList";
+import useIsSmallDevice from "../hooks/useIsSmallDevice";
 import { participateItems, resourcesItems } from "../utils/constants";
 import { mdHorizontalPadding, xlHorizontalPadding } from "../utils/theme";
 
 export default function Footer(props: StackProps) {
+  const isSmallDevice = useIsSmallDevice();
   return (
     <Stack
       direction="column"
-      height={210}
+      height={isSmallDevice ? 160 : 210}
       sx={{ backgroundColor: "#331a00" }}
       {...props}
     >

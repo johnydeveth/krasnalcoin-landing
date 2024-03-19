@@ -22,10 +22,7 @@ export default function Description(props: StackProps) {
       </Typography>
       <Typography
         fontWeight={400}
-        fontSize={{
-          xs: 15,
-          md: 18,
-        }}
+        fontSize={18}
         lineHeight={{
           xs: "18px",
           md: "22px",
