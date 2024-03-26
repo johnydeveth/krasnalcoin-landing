@@ -10,7 +10,9 @@ const ITEMS = [
 
 export default function LanguageSelector(props: StackProps) {
   const { i18n } = useTranslation();
-  console.log(i18n.language);
+
+  const nothingSelected = !ITEMS.find((item) => i18n.language === item.value);
+
   return (
     <Stack
       direction="row"
@@ -25,12 +27,17 @@ export default function LanguageSelector(props: StackProps) {
     >
       {ITEMS.map((item) => (
         <Box
+          key={item.value}
           component="img"
           src={item.icon}
           height={{ xs: 28, md: 32 }}
           sx={{
             cursor: "pointer",
-            opacity: i18n.language === item.value ? 0.9 : 0.6,
+            opacity:
+              i18n.language === item.value ||
+              (nothingSelected && item.value === "en")
+                ? 0.9
+                : 0.6,
             transition: "opacity 0.3s ease-in-out",
             ":hover": { opacity: 0.9 },
           }}
