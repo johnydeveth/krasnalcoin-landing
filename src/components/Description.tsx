@@ -1,8 +1,10 @@
 import { Box, Stack, StackProps, Typography } from "@mui/material";
+import { Trans, useTranslation } from "react-i18next";
 import Logo from "../assets/grouped_dwarfs_2.png";
 import LinkButton from "./LinkButton";
 
 export default function Description(props: StackProps) {
+  const { t } = useTranslation();
   return (
     <Stack
       direction="column"
@@ -18,7 +20,7 @@ export default function Description(props: StackProps) {
         whiteSpace="nowrap"
         overflow="clip"
       >
-        Resilience
+        {t("description.title")}
       </Typography>
       <Typography
         fontWeight={400}
@@ -30,17 +32,12 @@ export default function Description(props: StackProps) {
         textAlign="justify"
         paddingBottom={2}
       >
-        Amidst the surrounding fears about the future, <br />
-        <br />
-        inspired by the worst financial advice from self-proclaimed experts,{" "}
-        <br />
-        <br />
-        in contrast to the general public opinion, <br />
-        <br />a bastard child of low interest rates and an orphan of money
-        printing has emerged...
+        <Trans i18nKey="description.text" />
       </Typography>
       <LinkButton href="https://krasnalcoin.pl/wp-content/uploads/2024/02/Litepaper-Krasnalcoina.pdf">
-        Read&nbsp;<Box fontWeight="bold">LitePaper</Box>
+        <Trans i18nKey="description.button">
+          Read&nbsp;<Box fontWeight="bold">LitePaper</Box>
+        </Trans>
       </LinkButton>
     </Stack>
   );

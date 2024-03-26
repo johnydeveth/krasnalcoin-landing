@@ -1,13 +1,15 @@
-import { Box, Stack, Typography } from "@mui/material";
+import { Box, Stack, Tooltip, Typography } from "@mui/material";
 
 export default function TokenomicsItem({
   img,
   text,
+  tooltip,
   round,
   url,
 }: {
   img: string;
   text?: string;
+  tooltip?: string;
   round?: boolean;
   url?: string;
 }) {
@@ -21,7 +23,7 @@ export default function TokenomicsItem({
       }}
     />
   );
-  return (
+  const content = (
     <Stack alignItems="center" spacing={1}>
       {url ? (
         <Box component="a" href={url} target="_blank" rel="noopener noreferrer">
@@ -33,4 +35,6 @@ export default function TokenomicsItem({
       {text && <Typography variant="body1">{text}</Typography>}
     </Stack>
   );
+
+  return tooltip ? <Tooltip title={tooltip || ""}>{content}</Tooltip> : content;
 }

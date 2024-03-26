@@ -1,5 +1,6 @@
 import { Box, Stack, Typography } from "@mui/material";
 import { useRef } from "react";
+import { useTranslation } from "react-i18next";
 import Background from "../assets/background_bottom.png";
 import EiAi from "../assets/eiai.png";
 import Gang from "../assets/gangkrasnali.png";
@@ -16,6 +17,7 @@ export const mdHorizontalPadding = "140px";
 export default function Tokenomics() {
   const ref = useRef<HTMLDivElement>(null);
   const isVisible = useOnScreen(ref);
+  const { t } = useTranslation();
   return (
     <Box
       height="100%"
@@ -58,8 +60,8 @@ export default function Tokenomics() {
             paddingY={2}
             alignItems="center"
           >
-            <Typography variant="h4">Friends</Typography>
-            <Typography variant="h6">Dwarf friendly projects</Typography>
+            <Typography variant="h4">{t("friends.title")}</Typography>
+            <Typography variant="h6">{t("friends.subtitle")}</Typography>
             <Stack
               direction="row"
               justifyContent="space-evenly"

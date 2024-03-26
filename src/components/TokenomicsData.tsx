@@ -1,4 +1,5 @@
 import { Stack, StackProps, Typography } from "@mui/material";
+import { useTranslation } from "react-i18next";
 import Flame from "../assets/flame.png";
 import Lock from "../assets/lock.png";
 import Lp from "../assets/lp.png";
@@ -7,6 +8,7 @@ import TokenomicsItem from "./TokenomicsItem";
 import WhiteContainer from "./WhiteContainer";
 
 export default function TokenomicsData(props: StackProps) {
+  const { t } = useTranslation();
   const { burnedPercent, lpPercent, stakingPercent } = useTokenInfo();
 
   return (
@@ -17,7 +19,7 @@ export default function TokenomicsData(props: StackProps) {
       alignItems="center"
       {...props}
     >
-      <Typography variant="h4">Tokenomics</Typography>
+      <Typography variant="h4">{t("tokenomics.title")}</Typography>
       <Typography variant="h6">1 000 000 000 $KC</Typography>
       <Stack
         direction="row"
@@ -25,9 +27,21 @@ export default function TokenomicsData(props: StackProps) {
         spacing={5}
         paddingTop={3}
       >
-        <TokenomicsItem img={Flame} text={`${burnedPercent}% Burned`} />
-        <TokenomicsItem img={Lock} text={`${stakingPercent}% Locked`} />
-        <TokenomicsItem img={Lp} text={`${lpPercent}% LP`} />
+        <TokenomicsItem
+          img={Flame}
+          text={`${burnedPercent}% ${t("tokenomics.burned")}`}
+          tooltip={t("tokenomics.burned.description")}
+        />
+        <TokenomicsItem
+          img={Lock}
+          text={`${stakingPercent}% ${t("tokenomics.locked")}`}
+          tooltip={t("tokenomics.locked.description")}
+        />
+        <TokenomicsItem
+          img={Lp}
+          text={`${lpPercent}% LP`}
+          tooltip={t("tokenomics.lp.description")}
+        />
       </Stack>
     </WhiteContainer>
   );

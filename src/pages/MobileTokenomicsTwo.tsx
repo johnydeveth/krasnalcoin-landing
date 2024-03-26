@@ -8,6 +8,7 @@ import TokenomicsItem from "../components/TokenomicsItem";
 import WhiteContainer from "../components/WhiteContainer";
 import useOnScreen from "../hooks/useOnScreen";
 import Footer from "./Footer";
+import { useTranslation } from "react-i18next";
 
 export const xlHorizontalPadding = "200px";
 export const mdHorizontalPadding = "140px";
@@ -15,6 +16,7 @@ export const mdHorizontalPadding = "140px";
 export default function Tokenomics() {
   const ref = useRef<HTMLDivElement>(null);
   const isVisible = useOnScreen(ref);
+  const { t } = useTranslation();
   return (
     <Box
       height="100%"
@@ -47,8 +49,8 @@ export default function Tokenomics() {
             paddingY={1}
             alignItems="center"
           >
-            <Typography variant="h4">Friends</Typography>
-            <Typography variant="h6">Dwarf friendly projects</Typography>
+            <Typography variant="h4">{t("friends.title")}</Typography>
+            <Typography variant="h6">{t("friends.subtitle")}</Typography>
             <Stack
               direction="row"
               justifyContent="space-evenly"

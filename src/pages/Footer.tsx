@@ -5,9 +5,11 @@ import LinkList from "../components/LinkList";
 import useIsSmallDevice from "../hooks/useIsSmallDevice";
 import { participateItems, resourcesItems } from "../utils/constants";
 import { mdHorizontalPadding, xlHorizontalPadding } from "../utils/theme";
+import { useTranslation } from "react-i18next";
 
 export default function Footer(props: StackProps) {
   const isSmallDevice = useIsSmallDevice();
+  const { t } = useTranslation();
   return (
     <Stack
       direction="column"
@@ -41,8 +43,8 @@ export default function Footer(props: StackProps) {
             transform: "translate(0, -50%)",
           }}
         >
-          <LinkList title="Resources" items={resourcesItems} />
-          <LinkList title="Participate" items={participateItems} />
+          <LinkList title={t("footer.resources")} items={resourcesItems} />
+          <LinkList title={t("footer.participate")} items={participateItems} />
         </Stack>
       </Box>
       <CustomDivider />
