@@ -2,6 +2,7 @@ import { Box, BoxProps, Stack, Typography } from "@mui/material";
 import { Trans, useTranslation } from "react-i18next";
 import Background from "../assets/background_upper.png";
 import Logo from "../assets/logo.png";
+import BackgroundMusic from "../components/BackgroundMusic";
 import LanguageSelector from "../components/LanguageSelector";
 import LinkButton from "../components/LinkButton";
 import Scroll from "../components/Scroll";
@@ -26,8 +27,9 @@ export default function Landing(props: BoxProps) {
       }}
       {...props}
     >
+      <LanguageSelector />
+      <BackgroundMusic />
       <Stack alignItems="center" pb={{ xs: 6, md: 0 }}>
-        <LanguageSelector />
         <img src={Logo} className="logo" />
         <Typography
           className="animate-charcter"

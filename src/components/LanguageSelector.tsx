@@ -1,7 +1,7 @@
 import { Box, Stack, StackProps } from "@mui/material";
 import { useTranslation } from "react-i18next";
-import Poland from "../assets/poland.png";
-import Usa from "../assets/usa.png";
+import Poland from "../assets/pl.png";
+import Usa from "../assets/us.png";
 
 const ITEMS = [
   { icon: Poland, value: "pl" },

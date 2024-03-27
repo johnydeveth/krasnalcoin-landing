@@ -1,0 +1,93 @@
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  background: #5bdb96;
+  animation: ripple 2s infinite;
+  box-shadow: 0px 0px 1px 0px #508fb9;
+}
+
+.small {
+  width: 30px;
+  height: 30px;
+  left: -15px;
+  bottom: -15px;
+}
+
+.medium {
+  width: 42px;
+  height: 42px;
+  left: -21px;
+  bottom: -21px;
+}
+
+.large {
+  width: 50px;
+  height: 50px;
+  left: -25px;
+  bottom: -25px;
+}
+
+.xlarge {
+  width: 64px;
+  height: 64px;
+  left: -32px;
+  bottom: -32px;
+}
+
+.xxlarge {
+  width: 84px;
+  height: 84px;
+  left: -42px;
+  bottom: -42px;
+}
+
+.shade1 {
+  opacity: 0.2;
+}
+.shade2 {
+  opacity: 0.5;
+}
+
+.shade3 {
+  opacity: 0.7;
+}
+
+.shade4 {
+  opacity: 0.8;
+}
+
+.shade5 {
+  opacity: 0.9;
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0.8);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(0.8);
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  25% {
+    transform: rotate(-10deg) scale(1.1);
+  }
+  50% {
+    transform: rotate(0deg) scale(1);
+  }
+  75% {
+    transform: rotate(10deg) scale(1.1);
+  }
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+}

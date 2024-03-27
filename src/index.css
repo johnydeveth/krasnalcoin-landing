@@ -4,6 +4,7 @@ html {
   margin: 0;
   overflow: hidden;
   background-color: #bbcc4c;
+  font-family: "ComicNeue";
 }
 #root {
   width: 100%;
@@ -71,4 +72,48 @@ html {
     transform: translateY(0);
     opacity: 1;
   }
+}
+
+@font-face {
+  font-family: "ComicNeue";
+  src: local("ComicNeue"), url(./fonts/ComicNeue-Bold.otf) format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ComicNeue";
+  src: local("ComicNeue"), url(./fonts/ComicNeue-Regular.otf) format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ComicNeue";
+  src: local("ComicNeue"), url(./fonts/ComicNeue-Light.otf) format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ComicNeue";
+  src: local("ComicNeue"),
+    url(./fonts/ComicNeue-BoldItalic.otf) format("opentype");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "ComicNeue";
+  src: local("ComicNeue"), url(./fonts/ComicNeue-Italic.otf) format("opentype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "ComicNeue";
+  src: local("ComicNeue"),
+    url(./fonts/ComicNeue-LightItalic.otf) format("opentype");
+  font-weight: 300;
+  font-style: italic;
 }
