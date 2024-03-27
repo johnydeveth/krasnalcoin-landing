@@ -50,11 +50,13 @@ export default function BackgroundMusic() {
         }}
         onClick={() => setIsPlaying((p) => !p)}
       >
-        {isPlaying ? (
+        {!isPlaying ? (
           <MusicOffIcon
             sx={{
               color: "white",
               fontSize: 20,
+              animation: "shake 2.5s",
+              animationIterationCount: "infinite",
             }}
           />
         ) : (

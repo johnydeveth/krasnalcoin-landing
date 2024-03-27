@@ -35,9 +35,7 @@ export default function Description(props: StackProps) {
         <Trans i18nKey="description.text" />
       </Typography>
       <LinkButton href="https://krasnalcoin.pl/wp-content/uploads/2024/02/Litepaper-Krasnalcoina.pdf">
-        <Trans i18nKey="description.button">
-          Read&nbsp;<Box fontWeight="bold">LitePaper</Box>
-        </Trans>
+        {t("description.button")}&nbsp;<Box fontWeight="bold">LitePaper</Box>
       </LinkButton>
     </Stack>
   );
