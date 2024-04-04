@@ -22,7 +22,7 @@ export default function Loading(props: BoxProps) {
           <div className="sk-bounce-dot"></div>
           <div className="sk-bounce-dot"></div>
         </div>
-        <Typography variant="h5" color="white">
+        <Typography variant="h5" color="white" fontFamily="cursive">
           {t("loading")}
         </Typography>
       </Stack>
