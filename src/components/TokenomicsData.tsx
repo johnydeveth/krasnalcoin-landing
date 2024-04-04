@@ -1,5 +1,5 @@
 import { Stack, StackProps, Typography } from "@mui/material";
-import { useTranslation } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 import Flame from "../assets/flame.png";
 import Lock from "../assets/lock.png";
 import Lp from "../assets/lp.png";
@@ -20,7 +20,9 @@ export default function TokenomicsData(props: StackProps) {
       {...props}
     >
       <Typography variant="h4">{t("tokenomics.title")}</Typography>
-      <Typography variant="h6">1 000 000 000 $KC</Typography>
+      <Typography variant="h6">
+        1 000 000 000 <b>$DWF</b>
+      </Typography>
       <Stack
         direction="row"
         justifyContent="space-evenly"
@@ -40,7 +42,7 @@ export default function TokenomicsData(props: StackProps) {
         <TokenomicsItem
           img={Lp}
           text={`${lpPercent}% LP`}
-          tooltip={t("tokenomics.lp.description")}
+          tooltip={<Trans i18nKey={"tokenomics.lp.description"} />}
         />
       </Stack>
     </WhiteContainer>

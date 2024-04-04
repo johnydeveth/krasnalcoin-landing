@@ -1,4 +1,5 @@
 import { Box, Stack, Tooltip, Typography } from "@mui/material";
+import React from "react";
 
 export default function TokenomicsItem({
   img,
@@ -9,7 +10,7 @@ export default function TokenomicsItem({
 }: {
   img: string;
   text?: string;
-  tooltip?: string;
+  tooltip?: React.ReactNode;
   round?: boolean;
   url?: string;
 }) {
@@ -20,6 +21,10 @@ export default function TokenomicsItem({
       height={60}
       sx={{
         borderRadius: round ? 4 : 0,
+        transition: "transform 0.3s ease-in-out",
+        ":hover": {
+          transform: "scale(1.1)",
+        },
       }}
     />
   );
@@ -32,9 +37,19 @@ export default function TokenomicsItem({
       ) : (
         image
       )}
-      {text && <Typography variant="body1">{text}</Typography>}
+      {text && (
+        <Typography variant="body1" textAlign="center">
+          {text}
+        </Typography>
+      )}
     </Stack>
   );
 
-  return tooltip ? <Tooltip title={tooltip || ""}>{content}</Tooltip> : content;
+  return tooltip ? (
+    <Tooltip title={<Typography variant="body1">{tooltip || ""}</Typography>}>
+      {content}
+    </Tooltip>
+  ) : (
+    content
+  );
 }

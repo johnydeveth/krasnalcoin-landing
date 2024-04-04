@@ -50,6 +50,9 @@ function App() {
               <Box className={classes.page}>
                 <MobileTokenomicsTwo />
               </Box>
+              <Box sx={{ scrollSnapAlign: "center" }}>
+                <Footer />
+              </Box>
             </>
           ) : (
             <>

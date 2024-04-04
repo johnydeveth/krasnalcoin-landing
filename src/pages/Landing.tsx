@@ -30,7 +30,25 @@ export default function Landing(props: BoxProps) {
       <LanguageSelector />
       <BackgroundMusic />
       <Stack alignItems="center" pb={{ xs: 6, md: 0 }}>
-        <img src={Logo} className="logo" />
+        <Box position="relative">
+          <Box
+            sx={{
+              position: "absolute",
+              left: "50%",
+              top: "50%",
+              transform: "translate(-50%, -50%) scale(2.5)",
+              overflow: "show",
+            }}
+          >
+            <div className="circle circle-slow xxlarge shade1"></div>
+            <div className="circle circle-slow xlarge shade2"></div>
+            <div className="circle circle-slow large shade3"></div>
+            <div className="circle circle-slow mediun shade4"></div>
+            <div className="circle circle-slow small shade5"></div>
+          </Box>
+          <img src={Logo} className="logo" />
+        </Box>
+
         <Typography
           className="animate-charcter"
           variant="h4"
@@ -40,8 +58,8 @@ export default function Landing(props: BoxProps) {
           <Trans i18nKey="landing.title" />
         </Typography>
         <Stack spacing={{ xs: 1, md: 2 }} mt={{ xs: 2, md: 4 }}>
-          <LinkButton href="https://quickswap.exchange/#/swap?swapIndex=1&currency0=ETH&currency1=0x784665471bB8B945b57A76a9200B109Ee214E789">
-            {t("landing.buy")}&nbsp;<Box fontWeight="bold">$KC</Box>
+          <LinkButton href="https://app.uniswap.org/swap?outputCurrency=0xcb6a72d1ca3b46fc4ca35ed7d3379e51435d5f52">
+            {t("landing.buy")}&nbsp;<Box fontWeight="bold">$DWF</Box>
           </LinkButton>
           <LinkButton href="https://app.krasnalcoin.finance/">
             {t("landing.open")}&nbsp;<Box fontWeight="bold">App</Box>

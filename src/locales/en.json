@@ -3,10 +3,9 @@
   "landing.title": "AI-Driven <br />Crypto Magic",
   "landing.buy": "Buy",
   "landing.open": "Open",
-  "friends.title": "Friends",
   "friends.subtitle": "Dwarf friendly projects",
   "description.title": "Resilience",
-  "description.text": "Amidst the surrounding fears about the future, <br /><br />inspired by the worst financial advice from self-proclaimed experts,<br /><br />in contrast to the general public opinion, <br /><br />a bastard child of low interest rates and an orphan of moneyprinting has emerged...",
+  "description.text": "The $DWF Dwarfs and $KC Krasnals, once competitors, now allies, harness the power of artificial intelligence to outsmart their foes. <br/><br/>Together, they craft ingenious strategies, blending brawn and brains to safeguard their realm. United, they prove that even in digital battles, unity is the ultimate weapon.",
   "description.button": "Read",
   "footer.resources": "Resources",
   "footer.participate": "Participate",
@@ -15,5 +14,8 @@
   "tokenomics.burned.description": "burned forever in dwarfs mines",
   "tokenomics.locked": "Locked",
   "tokenomics.locked.description": "safely locked in dwarfs treasuries",
-  "tokenomics.lp.description": "added to dwarfs liquidity pools"
+  "tokenomics.lp.description": "added to dwarfs liquidity pools",
+  "multichain.title": "Multichain",
+  "multichain.subtitle0": "is for Base, ",
+  "multichain.subtitle1": "is for Polygon"
 }

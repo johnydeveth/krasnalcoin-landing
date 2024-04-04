@@ -24,8 +24,6 @@ export default function BackgroundMusic() {
             position: "absolute",
             left: { xs: 22, md: 32 },
             top: { xs: 18, md: 32 },
-            // height: { xs: 28, md: 32 },
-            // width: { xs: 28, md: 32 },
             overflow: "show",
           }}
         >
