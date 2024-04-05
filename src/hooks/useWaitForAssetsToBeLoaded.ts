@@ -10,15 +10,26 @@ export default function useWaitForAssetsToBeLoaded() {
   useEffect(() => {
     const assets = [BackgroundLower, BackgroundUpper, Logo, PlFlag, UsFlag];
     let numberOfLoaded = 0;
+    let imagesLoaded = false
+    let fontsLoaded = false;
     assets.forEach((a) => {
       const image = new Image();
       image.addEventListener("load", function () {
         numberOfLoaded += 1;
         if (numberOfLoaded === assets.length) {
-          setAssetsLoaded(true);
+          if (fontsLoaded) {
+            setAssetsLoaded(true);
+          }
+          imagesLoaded = true;
         }
       });
       image.src = a;
+    });
+    document.fonts.ready.then(function () {
+      if (imagesLoaded) {
+        setAssetsLoaded(true);
+      }
+      fontsLoaded = true;
     });
   }, [setAssetsLoaded]);
   return assetsLoaded;
