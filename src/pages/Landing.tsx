@@ -1,5 +1,5 @@
 import { Box, BoxProps, Stack, Typography } from "@mui/material";
-import { useTranslation } from "react-i18next";
+// import { useTranslation } from "react-i18next";
 import Background from "../assets/background_upper.png";
 import Logo from "../assets/logo.png";
 import BackgroundMusic from "../components/BackgroundMusic";
@@ -7,7 +7,7 @@ import LanguageSelector from "../components/LanguageSelector";
 import Scroll from "../components/Scroll";
 
 export default function Landing(props: BoxProps) {
-  const { t } = useTranslation();
+  // const { t } = useTranslation();
 
   return (
     <Box
