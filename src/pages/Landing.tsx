@@ -1,10 +1,9 @@
 import { Box, BoxProps, Stack, Typography } from "@mui/material";
-import { Trans, useTranslation } from "react-i18next";
+import { useTranslation } from "react-i18next";
 import Background from "../assets/background_upper.png";
 import Logo from "../assets/logo.png";
 import BackgroundMusic from "../components/BackgroundMusic";
 import LanguageSelector from "../components/LanguageSelector";
-import LinkButton from "../components/LinkButton";
 import Scroll from "../components/Scroll";
 
 export default function Landing(props: BoxProps) {
@@ -49,7 +48,44 @@ export default function Landing(props: BoxProps) {
           <img src={Logo} className="logo" />
         </Box>
 
-        <Typography
+        <Typography variant="body1" textAlign="center" maxWidth={400}>
+          Smart Contract Address:{" "}
+          <b>0xcb6a72d1ca3b46fc4ca35ed7d3379e51435d5f52</b>
+          <br />
+          DexTools:
+          <a href="https://www.dextools.io/app/en/base/pair-explorer/0x672043650061e3d5c3a1db52741499be4a3eec66">
+            https://www.dextools.io/app/en/base/pair-explorer/0x672043650061e3d5c3a1db52741499be4a3eec66
+          </a>
+          <br />
+          Discord:{" "}
+          <a href="https://discord.gg/37UQ98R7">https://discord.gg/37UQ98R7</a>
+          <br />
+          Telegram: <a href="https://t.me/dwarfai">https://t.me/dwarfai</a>
+          <br />
+          Twitter:{" "}
+          <a href="https://twitter.com/DwarfAI">https://twitter.com/DwarfAI</a>
+          <br />
+          Extra:{" "}
+          <a href="https://app.krasnalcoin.finance/">
+            https://app.krasnalcoin.finance/
+          </a>
+          <br />
+          Instagram:{" "}
+          <a href="https://www.instagram.com/dwarf_ai">
+            https://www.instagram.com/dwarf_ai
+          </a>
+          <br />
+          Youtube:{" "}
+          <a href="https://www.youtube.com/@Dwarf_AI">
+            https://www.youtube.com/@Dwarf_AI
+          </a>
+          <br />
+          NFT:{" "}
+          <a href="https://opensea.io/collection/ejajkrasnal">
+            https://opensea.io/collection/ejajkrasnal
+          </a>
+        </Typography>
+        {/* <Typography
           className="animate-charcter"
           variant="h4"
           textAlign="center"
@@ -63,8 +99,8 @@ export default function Landing(props: BoxProps) {
           </LinkButton>
           <LinkButton href="https://app.krasnalcoin.finance/">
             {t("landing.open")}&nbsp;<Box fontWeight="bold">App</Box>
-          </LinkButton>
-        </Stack>
+          </LinkButton> 
+        </Stack>*/}
         <Scroll marginTop={{ xs: 4, md: 8 }} />
       </Stack>
     </Box>
