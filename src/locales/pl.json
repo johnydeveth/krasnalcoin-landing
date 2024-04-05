@@ -5,7 +5,7 @@
   "landing.open": "Otwórz",
   "friends.subtitle": "Krasno przyjazne projekty",
   "description.title": "Odporni Razem",
-  "description.text": "Pośród otaczających lęków o przyszłość, <br /><br />inspirując się najgorszymi radami finansowymi samozwańczych ekspertów,<br /><br />w przeciwieństwie do powszechnej opinii publicznej, <br /><br />wyłoniło się bękart niskich stóp procentowych i sierota drukowania pieniędzy...",
+  "description.text": "Krasnale $DWF i Krasnale $KC, niegdyś rywale, teraz sojusznicy, wykorzystują moc sztucznej inteligencji, aby przechytrzyć swoich wrogów. <br/><br/>Razem opracowują genialne strategie, łącząc siłę i inteligencję, aby chronić swoje królestwo. Zjednoczeni udowadniają, że nawet w cyfrowych bitwach jedność jest największą bronią.",
   "description.button": "Czytaj",
   "footer.resources": "Źródła",
   "footer.participate": "Uczestnicz",
@@ -17,5 +17,12 @@
   "tokenomics.lp.description": "dodane do krasnalowych pól płynności",
   "multichain.title": "Multichain",
   "multichain.subtitle0": "jest dla Base, ",
-  "multichain.subtitle1": "jest dla Polygon"
+  "multichain.subtitle1": "jest dla Polygon",
+  "faq.title": "FAQ",
+  "faq.0.title": "Czym jest DwarfAI?",
+  "faq.0.description": "DwarfAI to alter ego Krasnalcoin oparte na Polygon, połączone z BASE za pomocą mostu. Monety mogą być swobodnie przenoszone między Polygon a BASE przy użyciu mostu. Podaż DwarfAI i Krasnalcoin jest stała dla obu blockchainów. Tzn. przeniesienie Krasnalcoin do BASE zmniejsza podaż Krasnalcoinów w Polygon.",
+  "faq.1.title": "Chcę zgromadzić jak najwięcej Krasnali. Od czego powinienem zacząć?",
+  "faq.1.description": "Najlepszym sposobem na zgromadzenie Krasnali jest zakup ich na Uniswap na sieci BASE. W tej chwili większość funkcji dostępna jest tylko na Polygon. Obejmują one tworzenie NFT AI dla zwiększenia stakingu, staking oraz farming. Przeniesienie twojego DwarfAI do Polygon jest dość proste – wystarczy użyć naszego niestandardowego mostu.",
+  "faq.2.title": "Powiedz mi coś więcej o tokenomii",
+  "faq.2.description": "Podaż DwarfAI jest ustalona na 1000000000. Podstawowy token został rozdany w uczciwym uruchomieniu 24 grudnia 2023 roku jako airdrop dla 596 odbiorców, którzy wkleili swój adres pod ogłoszeniem projektu na X. 99% podaży zostało rozdane w airdropie, pozostały 1% został dodany do LP, a tokeny LP zostały spalone. W tej chwili około 50% puli płynności na Polygon jest zablokowane do 2026 roku."
 }
