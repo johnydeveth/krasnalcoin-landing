@@ -1,6 +1,5 @@
 import { Box, Stack } from "@mui/material";
 import { makeStyles } from "@mui/styles";
-import { useTranslation } from "react-i18next";
 import Loading from "./components/Loading";
 import useIsSmallDevice from "./hooks/useIsSmallDevice";
 import useWaitForAssetsToBeLoaded from "./hooks/useWaitForAssetsToBeLoaded";
@@ -35,7 +34,6 @@ const useStyles = makeStyles({
 function App() {
   const classes = useStyles();
   const isSmallDevice = useIsSmallDevice();
-  const { t } = useTranslation();
 
   const assetsLoaded = useWaitForAssetsToBeLoaded();
 
