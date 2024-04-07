@@ -8,7 +8,7 @@ import MuiAccordionSummary, {
 import Typography from "@mui/material/Typography";
 import { styled } from "@mui/material/styles";
 import * as React from "react";
-import { useTranslation } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 import VisibleAnimation from "../components/VisibleAnimation";
 
 const Accordion = styled((props: AccordionProps) => (
@@ -74,7 +74,11 @@ export default function Faq() {
               <Typography>{t("faq.0.title")}</Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <Typography>{t("faq.0.description")}</Typography>
+              <Typography>
+              <Trans i18nKey="faq.0.description">
+                text<a href="https://app.krasnalcoin.finance/bridge">link</a>text
+              </Trans>
+              </Typography>
             </AccordionDetails>
           </Accordion>
           <Accordion

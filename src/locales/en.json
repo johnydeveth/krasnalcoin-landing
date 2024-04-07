@@ -20,7 +20,7 @@
   "multichain.subtitle1": "is for Polygon",
   "faq.title": "FAQ",
   "faq.0.title": "What is DwarfAI?",
-  "faq.0.description": "DwarfAI is a BASE bridged alter ego of the Krasnalcoin based on Polygon. The coins can be moved freely between Polygon and BASE using the bridge. The supply of DwarfAI and Krasnalcoin is fixed for both blockchains. i.e. bridging Krasnalcoin to BASE reduces the supply of Krasnalcoins in Polygon.",
+  "faq.0.description": "DwarfAI is a BASE bridged alter ego of the Krasnalcoin based on Polygon. The coins can be moved freely between Polygon and BASE <1>using the bridge</1>. The supply of DwarfAI and Krasnalcoin is fixed for both blockchains. i.e. bridging Krasnalcoin to BASE reduces the supply of Krasnalcoins in Polygon.",
   "faq.1.title": "I want to accumulate as much Dwarfs as possible. Where should I start?",
   "faq.1.description": "The best way to accumulate Dwarfs is to buy it on Uniswap on Base Network. At the moment, most utilities are available on Polygon only. These include minting AI NFTs for staking boost, staking and farming. Bridging your DwarfAI to Polygon is pretty straightforward – just use our custom bridge.",
   "faq.2.title": "Tell me more about tokenomics",
