@@ -20,7 +20,7 @@
   "multichain.subtitle1": "jest dla Polygon",
   "faq.title": "FAQ",
   "faq.0.title": "Czym jest DwarfAI?",
-  "faq.0.description": "DwarfAI to alter ego Krasnalcoin oparte na Polygon, połączone z BASE za pomocą mostu. Monety mogą być swobodnie przenoszone między Polygon a BASE przy użyciu mostu. Podaż DwarfAI i Krasnalcoin jest stała dla obu blockchainów. Tzn. przeniesienie Krasnalcoin do BASE zmniejsza podaż Krasnalcoinów w Polygon.",
+  "faq.0.description": "DwarfAI to alter ego Krasnalcoin oparte na Polygon, połączone z BASE za pomocą mostu. Monety mogą być swobodnie przenoszone między Polygon a BASE <1>przy użyciu mostu</1>. Podaż DwarfAI i Krasnalcoin jest stała dla obu blockchainów. Tzn. przeniesienie Krasnalcoin do BASE zmniejsza podaż Krasnalcoinów w Polygon.",
   "faq.1.title": "Chcę zgromadzić jak najwięcej Krasnali. Od czego powinienem zacząć?",
   "faq.1.description": "Najlepszym sposobem na zgromadzenie Krasnali jest zakup ich na Uniswap na sieci BASE. W tej chwili większość funkcji dostępna jest tylko na Polygon. Obejmują one tworzenie NFT AI dla zwiększenia stakingu, staking oraz farming. Przeniesienie twojego DwarfAI do Polygon jest dość proste – wystarczy użyć naszego niestandardowego mostu.",
   "faq.2.title": "Powiedz mi coś więcej o tokenomii",

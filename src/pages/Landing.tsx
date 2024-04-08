@@ -58,7 +58,7 @@ export default function Landing(props: BoxProps) {
           <Trans i18nKey="landing.title" />
         </Typography>
         <Stack spacing={{ xs: 1, md: 2 }} mt={{ xs: 2, md: 4 }}>
-          <LinkButton href="https://app.uniswap.org/swap?outputCurrency=0xcb6a72d1ca3b46fc4ca35ed7d3379e51435d5f52">
+          <LinkButton href="https://app.uniswap.org/swap?inputCurrency=eth&outputCurrency=0xcb6a72d1ca3b46fc4ca35ed7d3379e51435d5f52&chain=base">
             {t("landing.buy")}&nbsp;<Box fontWeight="bold">$DWF</Box>
           </LinkButton>
           <LinkButton href="https://app.krasnalcoin.finance/">
