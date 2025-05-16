@@ -28,6 +28,11 @@ export default function FriendItem({
         <Box
           component="img"
           src={img}
+          alt={title}
+          height={{
+            xs: 80,
+            md: 100,
+          }}
           sx={{ borderRadius: rounded ? "50%" : undefined }}
         />
       </Box>

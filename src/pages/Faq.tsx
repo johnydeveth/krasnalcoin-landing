@@ -109,6 +109,20 @@ export default function Faq() {
               <Typography>{t("faq.2.description")}</Typography>
             </AccordionDetails>
           </Accordion>
+          <Accordion
+            expanded={expanded === "panel4"}
+            onChange={handleChange("panel4")}
+          >
+            <AccordionSummary
+              aria-controls="panel4d-content"
+              id="panel4d-header"
+            >
+              <Typography>{t("faq.3.title")}</Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <Typography>{t("faq.3.description")}</Typography>
+            </AccordionDetails>
+          </Accordion>
         </Box>
       </Stack>
     </VisibleAnimation>

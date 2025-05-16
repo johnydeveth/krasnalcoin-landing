@@ -1,6 +1,6 @@
 import { Box, Stack, StackProps, Typography } from "@mui/material";
 import { Trans, useTranslation } from "react-i18next";
-import Logo from "../assets/grouped_dwarfs_2.png";
+import Logo from "../assets/grouped_dwarfs_2.webp";
 import LinkButton from "./LinkButton";
 
 export default function Description(props: StackProps) {

@@ -1,5 +1,3 @@
-import { DWF_TOKEN_ADDRESS } from "./web3";
-
 export const resourcesItems = [
   {
     title: "WhitePaper",
@@ -7,16 +5,16 @@ export const resourcesItems = [
   },
   {
     title: "DEXTools",
-    to: "https://www.dextools.io/app/en/base/pair-explorer/0x672043650061e3d5c3a1db52741499be4a3eec66",
+    to: "https://www.dextools.io/app/en/polygon/pair-explorer/0x6e76fcb1e64d441b75721021f6b8e4fc1b41f65b?t=1747401828651",
   },
   {
-    title: "Base Scan",
-    to: `https://basescan.org/token/${DWF_TOKEN_ADDRESS}`,
+    title: "PolygonScan",
+    to: "https://polygonscan.com/token/0x784665471bb8b945b57a76a9200b109ee214e789",
   },
 ];
 
 export const participateItems = [
-  { title: "Discord", to: "https://discord.gg/37UQ98R7" },
-  { title: "Twitter", to: "https://twitter.com/DwarfAI" },
-  { title: "Telegram", to: "https://t.me/dwarfai" },
+  { title: "Discord", to: "https://discord.com/invite/JM4TezBp7M" },
+  { title: "Twitter", to: "https://x.com/krasnal_coin" },
+  { title: "Telegram", to: "https://t.me/krasnalcoin_official" },
 ];

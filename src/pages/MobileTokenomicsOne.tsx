@@ -1,6 +1,6 @@
 import { Box, Stack } from "@mui/material";
 import { useEffect, useRef, useState } from "react";
-import Background from "../assets/background_bottom_mobile_1.png";
+import Background from "../assets/background_bottom_mobile_1.webp";
 import Description from "../components/Description";
 import WhiteContainer from "../components/WhiteContainer";
 import useOnScreen from "../hooks/useOnScreen";

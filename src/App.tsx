@@ -1,5 +1,6 @@
 import { Box, Stack } from "@mui/material";
 import { makeStyles } from "@mui/styles";
+import { useTranslation } from "react-i18next";
 import Loading from "./components/Loading";
 import useIsSmallDevice from "./hooks/useIsSmallDevice";
 import useWaitForAssetsToBeLoaded from "./hooks/useWaitForAssetsToBeLoaded";
@@ -32,6 +33,7 @@ const useStyles = makeStyles({
 });
 
 function App() {
+  const { t } = useTranslation();
   const classes = useStyles();
   const isSmallDevice = useIsSmallDevice();
 
@@ -39,6 +41,8 @@ function App() {
 
   return (
     <Box className={classes.container}>
+      <title>{t("html.title")}</title>
+      <meta name="description" content={t("html.description")} />
       {assetsLoaded ? (
         <>
           <Box className={classes.page}>

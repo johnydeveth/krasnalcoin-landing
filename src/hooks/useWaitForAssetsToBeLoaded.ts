@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import BackgroundLower from "../assets/background_bottom.png";
-import BackgroundUpper from "../assets/background_upper.png";
+import BackgroundLower from "../assets/background_bottom.webp";
+import BackgroundUpper from "../assets/background_upper.webp";
 import Logo from "../assets/logo.png";
 import PlFlag from "../assets/pl.png";
 import UsFlag from "../assets/us.png";

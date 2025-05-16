@@ -21,7 +21,7 @@ export default function TokenomicsData(props: StackProps) {
     >
       <Typography variant="h4">{t("tokenomics.title")}</Typography>
       <Typography variant="h6">
-        1 000 000 000 <b>$DWF</b>
+        1 000 000 000 <b>$KC</b>
       </Typography>
       <Stack
         direction="row"

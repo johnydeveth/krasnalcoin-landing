@@ -1,11 +1,11 @@
 import { Box, BoxProps, Stack, Typography } from "@mui/material";
 import { Trans, useTranslation } from "react-i18next";
-import Background from "../assets/background_upper.png";
+import Background from "../assets/background_upper.webp";
 import Logo from "../assets/logo.png";
 import BackgroundMusic from "../components/BackgroundMusic";
 import LanguageSelector from "../components/LanguageSelector";
-import Scroll from "../components/Scroll";
 import LinkButton from "../components/LinkButton";
+import Scroll from "../components/Scroll";
 
 export default function Landing(props: BoxProps) {
   const { t } = useTranslation();
@@ -58,12 +58,12 @@ export default function Landing(props: BoxProps) {
           <Trans i18nKey="landing.title" />
         </Typography>
         <Stack spacing={{ xs: 1, md: 2 }} mt={{ xs: 2, md: 4 }}>
-          <LinkButton href="https://app.uniswap.org/swap?inputCurrency=eth&outputCurrency=0xcb6a72d1ca3b46fc4ca35ed7d3379e51435d5f52&chain=base">
-            {t("landing.buy")}&nbsp;<Box fontWeight="bold">$DWF</Box>
+          <LinkButton href="https://swap.defillama.com/?chain=polygon&from=0x0000000000000000000000000000000000000000&tab=swap&to=0x784665471bb8b945b57a76a9200b109ee214e789">
+            {t("landing.buy")}&nbsp;<Box fontWeight="bold">$KC</Box>
           </LinkButton>
           <LinkButton href="https://app.krasnalcoin.finance/">
             {t("landing.open")}&nbsp;<Box fontWeight="bold">App</Box>
-          </LinkButton> 
+          </LinkButton>
         </Stack>
         <Scroll marginTop={{ xs: 4, md: 8 }} />
       </Stack>

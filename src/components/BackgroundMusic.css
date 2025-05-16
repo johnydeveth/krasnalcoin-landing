@@ -1,7 +1,7 @@
 .circle {
   position: absolute;
   border-radius: 50%;
-  background: #5bdb96;
+  background: #da9f39;
   animation: ripple 2s infinite;
   box-shadow: 0px 0px 1px 0px #508fb9;
 }

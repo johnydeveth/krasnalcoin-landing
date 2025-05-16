@@ -1,6 +1,6 @@
 import { Box, Stack } from "@mui/material";
 import { useRef } from "react";
-import MultichainData from "../components/MultichainData";
+import TeamData from "../components/TeamData";
 import TokenomicsData from "../components/TokenomicsData";
 import useOnScreen from "../hooks/useOnScreen";
 
@@ -36,7 +36,7 @@ export default function Tokenomics() {
         }}
       >
         <Stack flex={1} justifyContent="space-evenly">
-          <MultichainData />
+          <TeamData />
           <TokenomicsData />
         </Stack>
       </Stack>

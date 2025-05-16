@@ -1,18 +1,12 @@
-import { base, polygon } from "viem/chains";
+import { polygon } from "viem/chains";
 import { useReadContracts } from "wagmi";
 import kc from "../utils/abi/kc";
-import { DWF_TOKEN_ADDRESS, KC_TOKEN_ADDRESS } from "../utils/web3";
+import { KC_TOKEN_ADDRESS } from "../utils/web3";
 
 const kcContract = {
   address: KC_TOKEN_ADDRESS,
   abi: kc,
   chainId: polygon.id,
-} as const;
-
-const dwfContract = {
-  address: DWF_TOKEN_ADDRESS,
-  abi: kc,
-  chainId: base.id,
 } as const;
 
 const parsePercent = (value: bigint | undefined) => {
@@ -46,15 +40,15 @@ export default function useTokenInfo() {
         functionName: "balanceOf",
         args: ["0x9310FF367B83026982282d371c741E193aCeAf3B"],
       },
-    ],
-  });
-  const dwfResult = useReadContracts({
-    contracts: [
       {
-        ...dwfContract,
+        ...kcContract,
         functionName: "balanceOf",
-        // LP
-        args: ["0x672043650061e3d5c3a1db52741499be4a3eec66"],
+        args: ["0x9ecd3cfd06535d9e9558654549e8a8518f85758d"],
+      },
+      {
+        ...kcContract,
+        functionName: "balanceOf",
+        args: ["0x5D46ba963C9190e249DD99976519725f09E8A636"],
       },
     ],
   });
@@ -62,9 +56,8 @@ export default function useTokenInfo() {
   const lpBalance = kcResult.data?.[1]?.result as bigint | undefined;
   const staking1Balance = kcResult.data?.[2]?.result as bigint | undefined;
   const staking2Balance = kcResult.data?.[3]?.result as bigint | undefined;
-  const bridgeBalance = kcResult.data?.[4]?.result as bigint | undefined;
-
-  const dwfLpBalance = dwfResult.data?.[0]?.result as bigint | undefined;
+  const staking3Balance = kcResult.data?.[4]?.result as bigint | undefined;
+  const treasuryBalance = kcResult.data?.[5]?.result as bigint | undefined;
 
   const burnedAmount = totalSupply
     ? BigInt("1000000000000000") - totalSupply
@@ -79,41 +72,22 @@ export default function useTokenInfo() {
       ? (BigInt(10000) * lpBalance) / totalSupply
       : undefined
   );
-  const dwfLpPercent = parsePercent(
-    dwfLpBalance && totalSupply
-      ? (BigInt(10000) * dwfLpBalance) / totalSupply
-      : undefined
-  );
   const stakingPercent = parsePercent(
-    staking1Balance && staking2Balance && totalSupply
-      ? (BigInt(10000) * (staking1Balance + staking2Balance)) / totalSupply
-      : undefined
-  );
-  const dwfPercent = parsePercent(
-    bridgeBalance && totalSupply
-      ? (BigInt(10000) * bridgeBalance) / totalSupply
-      : undefined
-  );
-
-  const kcPercent = parsePercent(
-    bridgeBalance && totalSupply
-      ? ( BigInt(10000) * (totalSupply - bridgeBalance)) / totalSupply
+    staking1Balance && staking2Balance && staking3Balance && treasuryBalance && totalSupply
+      ? (BigInt(10000) * (staking1Balance + staking2Balance + staking3Balance + treasuryBalance)) / totalSupply
       : undefined
   );
 
   const lpPercent = parsePercent(
-    lpBalance && dwfLpBalance && totalSupply
-      ? (BigInt(10000) * (lpBalance + dwfLpBalance)) / totalSupply
+    lpBalance && totalSupply
+      ? (BigInt(10000) * (lpBalance)) / totalSupply
       : undefined
   );
 
   return {
     burnedPercent,
     kcLpPercent,
-    dwfLpPercent,
     lpPercent,
     stakingPercent,
-    dwfPercent,
-    kcPercent,
   };
 }

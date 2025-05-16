@@ -1,7 +1,7 @@
 import { Box, Stack } from "@mui/material";
-import Background from "../assets/background_bottom.png";
+import Background from "../assets/background_bottom.webp";
 import Description from "../components/Description";
-import MultichainData from "../components/MultichainData";
+import TeamData from "../components/TeamData";
 import TokenomicsData from "../components/TokenomicsData";
 import VisibleAnimation from "../components/VisibleAnimation";
 import WhiteContainer from "../components/WhiteContainer";
@@ -39,7 +39,7 @@ export default function Tokenomics() {
         <VisibleAnimation>
           <Stack direction="column" spacing={3}>
             <TokenomicsData />
-            <MultichainData />
+            <TeamData />
           </Stack>
         </VisibleAnimation>
         <VisibleAnimation>

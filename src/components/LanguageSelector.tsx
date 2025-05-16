@@ -4,8 +4,8 @@ import Poland from "../assets/pl.png";
 import Usa from "../assets/us.png";
 
 const ITEMS = [
-  { icon: Poland, value: "pl" },
-  { icon: Usa, value: "en" },
+  { icon: Poland, value: "pl", alt: "Polski" },
+  { icon: Usa, value: "en", alt: "English" },
 ];
 
 export default function LanguageSelector(props: StackProps) {
@@ -29,6 +29,7 @@ export default function LanguageSelector(props: StackProps) {
         <Box
           key={item.value}
           component="img"
+          alt={item.alt}
           src={item.icon}
           height={{ xs: 28, md: 32 }}
           sx={{

@@ -4,23 +4,28 @@ import React from "react";
 export default function TokenomicsItem({
   img,
   text,
+  subText,
   tooltip,
   round,
+  circle,
   url,
 }: {
   img: string;
   text?: string;
+  subText?: string;
   tooltip?: React.ReactNode;
   round?: boolean;
+  circle?: boolean;
   url?: string;
 }) {
   const image = (
     <Box
       component="img"
       src={img}
+      alt={text}
       height={60}
       sx={{
-        borderRadius: round ? 4 : 0,
+        borderRadius: round ? 4 : circle ? 20 : 0,
         transition: "transform 0.3s ease-in-out",
         ":hover": {
           transform: "scale(1.1)",
@@ -31,17 +36,30 @@ export default function TokenomicsItem({
   const content = (
     <Stack alignItems="center" spacing={1}>
       {url ? (
-        <Box component="a" href={url} target="_blank" rel="noopener noreferrer">
+        <Box
+          component="a"
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer"
+          height={60}
+        >
           {image}
         </Box>
       ) : (
         image
       )}
-      {text && (
-        <Typography variant="body1" textAlign="center">
-          {text}
-        </Typography>
-      )}
+      <Stack spacing={1}>
+        {text && (
+          <Typography variant="body1" textAlign="center">
+            {text}
+          </Typography>
+        )}
+        {subText && (
+          <Typography variant="body2" textAlign="center">
+            {subText}
+          </Typography>
+        )}
+      </Stack>
     </Stack>
   );
 
