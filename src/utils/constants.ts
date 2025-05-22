@@ -1,7 +1,7 @@
 export const resourcesItems = [
   {
     title: "WhitePaper",
-    to: "https://krasnalcoin.pl/wp-content/uploads/2024/02/Litepaper-Krasnalcoina.pdf",
+    to: "https://krasnalcoin-public.s3.eu-central-1.amazonaws.com/KC+Toilet+Paper.pdf",
   },
   {
     title: "DEXTools",
