@@ -1,6 +1,6 @@
 export const resourcesItems = [
   {
-    title: "WhitePaper",
+    title: "LitePaper",
     to: "https://krasnalcoin-public.s3.eu-central-1.amazonaws.com/KC+Toilet+Paper.pdf",
   },
   {
@@ -17,4 +17,13 @@ export const participateItems = [
   { title: "Discord", to: "https://discord.com/invite/JM4TezBp7M" },
   { title: "Twitter", to: "https://x.com/krasnal_coin" },
   { title: "Telegram", to: "https://t.me/krasnalcoin_official" },
+];
+
+export const nftItems = [
+  { title: "Aye-Eye", to: "https://opensea.io/collection/ejajkrasnal" },
+  { title: "Gang Krasnali", to: "https://opensea.io/collection/gangkrasnali" },
+  {
+    title: "Memorial Collection",
+    to: "https://opensea.io/collection/krasnalcoin",
+  },
 ];

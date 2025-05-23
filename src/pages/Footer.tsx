@@ -4,7 +4,7 @@ import Logo from "../assets/logo.png";
 import CustomDivider from "../components/CustomDivider";
 import LinkList from "../components/LinkList";
 import useIsSmallDevice from "../hooks/useIsSmallDevice";
-import { participateItems, resourcesItems } from "../utils/constants";
+import { nftItems, participateItems, resourcesItems } from "../utils/constants";
 import { mdHorizontalPadding, xlHorizontalPadding } from "../utils/theme";
 
 export default function Footer(props: StackProps) {
@@ -23,14 +23,17 @@ export default function Footer(props: StackProps) {
           src={Logo}
           position="absolute"
           top={{ xs: "16px", md: "54px" }}
-          left={{ xs: "23px", md: "224px" }}
+          left={{ xs: "16px", md: "224px" }}
           sx={{
-            width: 64,
+            width: {
+              xs: 48,
+              md: 64,
+            },
           }}
         />
         <Stack
           direction="row"
-          spacing={{ xs: 5, md: 16 }}
+          spacing={{ xs: 2, md: 16 }}
           position="absolute"
           sx={{
             right: {
@@ -42,6 +45,7 @@ export default function Footer(props: StackProps) {
             transform: "translate(0, -50%)",
           }}
         >
+          <LinkList title={t("footer.nft")} items={nftItems} />
           <LinkList title={t("footer.resources")} items={resourcesItems} />
           <LinkList title={t("footer.participate")} items={participateItems} />
         </Stack>

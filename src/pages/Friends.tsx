@@ -14,7 +14,7 @@ export default function Friends() {
   return (
     <Stack py={{ xs: "20px", md: "60px" }} width="100%" alignItems="center">
       <VisibleAnimation>
-        <Typography variant="h4" fontSize="34px">
+        <Typography variant="h4" fontSize="34px" textAlign={"center"}>
           {t("friends.subtitle")}
         </Typography>
       </VisibleAnimation>
