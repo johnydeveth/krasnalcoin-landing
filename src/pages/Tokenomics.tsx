@@ -50,7 +50,7 @@ export default function Tokenomics() {
               flexDirection: "column",
               alignItems: "center",
               justifyContent: "center",
-              paddingY: "50px",
+              paddingY: "32px",
             }}
           >
             <Description />

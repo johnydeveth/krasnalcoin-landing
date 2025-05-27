@@ -26,7 +26,7 @@ export default function Description(props: StackProps) {
         fontWeight={400}
         fontSize={18}
         lineHeight={{
-          xs: "18px",
+          xs: "21px",
           md: "22px",
         }}
         textAlign="justify"
